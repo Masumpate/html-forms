@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> ATPLC Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #14b98d;
+            padding: 40px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background: #888fb0;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(193, 170, 170, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #287683;
+            border-radius: 5px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        .buttons input {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #ff0000;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .buttons input[type="reset"] {
+            background: #0e972b;
+        }
+
+        .buttons input:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2> ATPLC Form</h2>
+        <form>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+
+            <label>Education Done:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="education" value="10th"> 10th</label>
+                <label><input type="checkbox" name="education" value="12th"> 12th</label>
+                <label><input type="checkbox" name="education" value="graduation"> Graduation</label>
+                <label><input type="checkbox" name="education" value="postgraduation"> Post-Graduation</label>
+            </div>
+
+            <label for="tea"> select your prefered course: </label>
+            <select id="tea" name="tea">
+                <option value="">-- Select an option --</option>
+                <option value="yes">full stack</option>
+                <option value="no">python </option>
+                <option value="sometimes">javascript </option>
+                <option value="sometimes"> php </option>
+                <option value="sometimes"> my sql </option>
+            </select>
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
